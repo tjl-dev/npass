@@ -12,4 +12,4 @@ npm install --save npass
 
 ## License
 
-MIT © [thiml](https://github.com/tjl-dev/npass)
+MIT © [tjl-dev](https://github.com/tjl-dev/npass)
