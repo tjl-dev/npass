@@ -12,7 +12,7 @@ The goal of nPass is to demonstrate a viable alternative to ad-supported content
 * Easy to add to your website.
 * Easy to add to your browser.
 
-nPass is built on the [Nano](https://nano.org/) cryptocurrency network - enabling fast and feeless transactions.
+nPass is built on the [Nano](https://nano.org/) cryptocurrency network, which enables fast and feeless transactions for near instant token generation.
 
 Visit [https://npass.dev/npass](https://npass.dev/npass) for a detailed overview and live demonstration.
 
