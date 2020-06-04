@@ -20,19 +20,22 @@ Visit [https://npass.dev/npass](https://npass.dev/npass) for a detailed overview
 Built on the [Nano](https://nano.org/) cryptocurrency network - enabling fast and feeless transactions.
 
 # Extension Setup Instructions
-1. Install the [nPass chrome extension](https://chrome.google.com/webstore/detail/npass/oohcmndahocfeiebkkdcbceeaanheafc)
-1. Create a wallet
+*  Install the [nPass chrome extension](https://chrome.google.com/webstore/detail/npass/oohcmndahocfeiebkkdcbceeaanheafc)
+*  Create a wallet. Export your generated keys to local file if you want to keep a backup. Beware of the risks involved with key management here.
+
 ![Wallet Screen](https://npass.dev/npass/images/nPass.screen.wallet.png)
-1. Export your generated keys to local file if you want to keep a backup. Beware of the risks involved with key management here.
-1. A QR code should be displayed on the Wallet page (accessible from the drop down menu in the extension)
-1. Using the QR code and your existing Nano wallet, send the nPass wallet a small amount of Nano for testing. A fraction of a Nano should suffice (e.g. 0.5 Nano), as the demo tokens don't cost much.
-1. The nPass wallet should detect the pending transaction and generate a receive block. A message will popup when it is received.
-1. Your wallet amount should be reflected on the Home page of the extension.
+*  A QR code should be displayed on the Wallet page (accessible from the drop down menu in the extension)
+*  Using the QR code and your existing Nano wallet, send the nPass wallet a small amount of Nano for testing. A fraction of a Nano should suffice (e.g. 0.5 Nano), as the demo tokens don't cost much.
+*  The nPass wallet should detect the pending transaction and generate a receive block. A message will popup when it is received.
+*  Your wallet amount should be reflected on the Home page of the extension.
+
 ![Home Screen](https://npass.dev/npass/images/nPass.screen.home.png)
-1. Visit [https://npass.dev/npass](https://npass.dev/npass) to try out the two demonstration examples - one demonstrates accessing media items, the other demonstrates paywalled access or site login using nPass tokens.
-1. To avoid the alert popping up on every token purchase, you can select AutoPay in the extension Settings screen. You can cap the amoun of Nano that is spent in total, or per domain.
+*  Visit [https://npass.dev/npass](https://npass.dev/npass) to try out the two demonstration examples - one demonstrates accessing media items, the other demonstrates paywalled access or site login using nPass tokens.
+*  To avoid the alert popping up on every token purchase, you can select AutoPay in the extension Settings screen. You can cap the amoun of Nano that is spent in total, or per domain.
+
 ![Settings Screen](https://npass.dev/npass/images/nPass.screen.settings.png)
-1. Any tokens purchased from the demo site should be visible in the extension
+*  Any tokens purchased from the demo site should be visible in the extension
+
 ![Token Screen](https://npass.dev/npass/images/nPass.screen.tokens.png)
 
 
