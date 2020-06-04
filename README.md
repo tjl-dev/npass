@@ -12,11 +12,13 @@ The goal of nPass is to demonstrate a viable alternative to ad-supported content
 * Easy to add to your website.
 * Easy to add to your browser.
 
-![Screenshot](https://npass.dev/npass/images/nPass.demo.screenshot.png)
+nPass is built on the [Nano](https://nano.org/) cryptocurrency network - enabling fast and feeless transactions.
 
 Visit [https://npass.dev/npass](https://npass.dev/npass) for a detailed overview and live demonstration.
 
-nPass is built on the [Nano](https://nano.org/) cryptocurrency network - enabling fast and feeless transactions.
+![Screenshot](https://npass.dev/npass/images/nPass.demo.screenshot.png)
+
+This repository contains _npass-lib_, a set of ReactJS widgets a web site can use to interact with the nPass extension, and _npass-demo-server_, an example Vertx (Kotlin) web server used to handle http based resource requests with embedded nPass tokens. The [demo website](https://npass.dev/npass) code is included as npass-lib/example. 
 
 # Extension Setup Instructions
 *  Install the [nPass chrome extension](https://chrome.google.com/webstore/detail/npass/oohcmndahocfeiebkkdcbceeaanheafc).
