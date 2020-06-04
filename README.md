@@ -14,7 +14,7 @@ The goal of nPass is to demonstrate a viable alternative to ad-supported content
 * Easy to add to your website.
 * Easy to add to your browser.
 
-![Screenshot](https://npass.dev/npass/images/nPass.marquee.png)
+![Screenshot](https://npass.dev/npass/images/nPass.demo.screenshot.png)
 
 Visit [https://npass.dev/npass](https://npass.dev/npass) for a detailed overview and live demonstration.
 
