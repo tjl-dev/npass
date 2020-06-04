@@ -5,11 +5,9 @@ Note: nPass library code & example site will be migrated after June 5th 2020
 
 # Overview
 
-nPass is a chrome extension that interacts with web sites to provide paid access tokens, both for the general case of logging in to a site (no user registration required), and for access to individual content (no need to watch commercials).
+__nPass__ is a [chrome extension](https://chrome.google.com/webstore/detail/npass/oohcmndahocfeiebkkdcbceeaanheafc) that interacts with web sites to generate and provide paid access tokens on demand, both for the general case of logging in to a site (no user registration required), and for access to individual content (no need to watch commercials).
 
 The goal of nPass is to demonstrate a viable alternative to ad-supported content:
-* No more ads.
-* No need for user registration.
 * Direct compensation for your content.
 * Easy to add to your website.
 * Easy to add to your browser.
@@ -18,16 +16,17 @@ The goal of nPass is to demonstrate a viable alternative to ad-supported content
 
 Visit [https://npass.dev/npass](https://npass.dev/npass) for a detailed overview and live demonstration.
 
-Built on the [Nano](https://nano.org/) cryptocurrency network - enabling fast and feeless transactions.
+nPass is built on the [Nano](https://nano.org/) cryptocurrency network - enabling fast and feeless transactions.
 
 # Extension Setup Instructions
-*  Install the [nPass chrome extension](https://chrome.google.com/webstore/detail/npass/oohcmndahocfeiebkkdcbceeaanheafc)
-*  Create a wallet. Export your generated keys to local file if you want to keep a backup. Beware of the risks involved with key management here.
+*  Install the [nPass chrome extension](https://chrome.google.com/webstore/detail/npass/oohcmndahocfeiebkkdcbceeaanheafc).
+*  Create a new wallet. You can export your generated keys to a local file if you want to keep a backup. If you do export the keys, please keep in mind the risks involved with key management.
+* __Note__: Since nPass is still in alpha stage of development, it is not recommended to use this wallet to hold more than a trivial amount of Nano for testing purposes.
 
 ![Wallet Screen](https://npass.dev/npass/images/nPass.screen.wallet.png)
-*  A QR code should be displayed on the Wallet page (accessible from the drop down menu in the extension)
-*  Using the QR code and your existing Nano wallet, send the nPass wallet a small amount of Nano for testing. A fraction of a Nano should suffice (e.g. 0.5 Nano), as the demo tokens don't cost much.
-*  The nPass wallet should detect the pending transaction and generate a receive block. A message will popup when it is received.
+*  A QR code should be displayed on the Wallet page (accessible from the drop down menu in the extension).
+*  Using the QR code and your existing Nano wallet, send the nPass wallet a small amount of Nano for testing. 
+*  The nPass wallet should detect the pending transaction and generate a receive block to open the account. A message will popup when it is received.
 *  Your wallet amount should be reflected on the Home page of the extension.
 
 ![Home Screen](https://npass.dev/npass/images/nPass.screen.home.png)
