@@ -10,21 +10,6 @@
 npm install --save npass
 ```
 
-## Usage
-
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'npass'
-import 'npass/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
-```
-
 ## License
 
 MIT © [thiml](https://github.com/tjl-dev/npass)
