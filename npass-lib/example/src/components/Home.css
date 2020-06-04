@@ -1,0 +1,23 @@
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
+
+li:not(.summary) {
+    margin-bottom: 5px;
+}
+
+.summary ul {
+    display: table;
+    margin: 0 auto;
+    list-style-type:circle;
+    text-align: "centre";
+}
+
+.summary li {
+    margin: 5px;
+    text-align: left;
+}
+

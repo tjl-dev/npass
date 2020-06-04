@@ -1,0 +1,10 @@
+.nPass-content-wrapper {
+    padding: 10px;
+    display: inline-grid;
+    position: relative;
+}
+
+.npass-button-icon {
+    height: 30px;
+    padding-right: 10px;
+}

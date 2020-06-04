@@ -1,0 +1,37 @@
+.viewer-label {
+    font-size: 1.5em;
+}
+
+.viewer-card {
+    min-height: 700px;
+    min-width: 600px;
+}
+
+.viewer-card-footer {
+    height: 60px;
+    background-color: white;
+}
+
+.viewer-payment-notification {
+    font-size: small;
+    position: absolute;
+    color: rgb(21, 53, 156);
+    z-index: 99;
+    padding: 1px;
+}
+
+.viewer-payment-notification > div > div.toast-body {
+    padding: 2px;
+}
+
+.viewer-payment-summary {
+    font-size: small;
+}
+
+.token-meta-viewer {
+    font-size: x-small;
+    position: absolute;  
+    top: 60%;
+    left: 50%;
+    margin-left: -220px;                        
+}

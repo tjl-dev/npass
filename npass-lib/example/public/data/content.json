@@ -1,0 +1,65 @@
+{ 
+    "images" : {
+        "Digital": {
+            "title": "Digital",
+            "contentId": "/npass/protected/images/69b406.jpg",
+            "preview": "/npass/images/preview/88041c.jpg",
+            "src": "/npass/protected/images/69b406.jpg",
+            "viewerType": "image",
+            "max-width": 500,
+            "max-height" : 400
+        },
+
+        "Cowboy" : {
+            "title": "Cowboy",
+            "contentId": "/npass/protected/images/4A3CC1.png",
+            "preview": "/npass/images/preview/63BEE2.png",
+            "src": "/npass/protected/images/4A3CC1.png",
+            "viewerType": "image",
+            "max-width": 500,
+            "max-height" : 400
+        },
+
+        "Art" : {
+            "title": "Art",
+            "contentId": "/npass/protected/images/b5b420.jpg",
+            "preview": "/npass/images/preview/bcf08c.jpg",
+            "src": "/npass/protected/images/b5b420.jpg",
+            "viewerType": "image",
+            "max-width": 500,
+            "max-height" : 400
+        },
+
+        "Photography" : {
+            "title": "Photography",
+            "contentId": "/npass/protected/images/713be2.jpg",
+            "preview": "/npass/images/preview/2849a4.jpg",
+            "src": "/npass/protected/images/713be2.jpg",
+            "viewerType": "image",
+            "max-width": 500,
+            "max-height" : 400
+        }
+    },
+
+    "videos": {
+        "Video: Snow" : {
+            "title": "Video: Snow",
+            "contentId": "/npass/protected/videos/pexels-snow.mp4",
+            "preview": "/npass/images/preview/pexels-snow.png",
+            "src": "/npass/protected/videos/pexels-snow.mp4",
+            "viewerType": "video",
+            "max-width": 800,
+            "max-height": 800
+        },
+
+        "Video: Rain": {
+            "title": "Video: Rain",
+            "contentId": "/npass/protected/videos/pexels-rain.mp4",
+            "preview": "/npass/images/preview/pexels-rain.png",
+            "src": "/npass/protected/videos/pexels-rain.mp4",
+            "viewerType": "video",
+            "max-width": 800,
+            "max-height": 800
+        }
+    }
+}

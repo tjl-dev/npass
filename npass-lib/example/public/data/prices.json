@@ -1,0 +1,48 @@
+{
+
+    "imagePrices" : {   
+        "1 Hour": {
+            "durationSeconds": 3600,
+            "price": 0.00000001
+        },
+        "1 Day": {
+            "durationSeconds": 86400,
+            "price": 0.00000015
+        },
+        "1 Week": {
+            "durationSeconds": 604800,
+            "price": 0.00000050
+        }
+    },
+
+    "videoPrices":  {   
+        "1 Hour": {
+            "durationSeconds": 3600,
+            "price": 0.00095
+        },
+        "1 Day": {
+            "durationSeconds": 86400,
+            "price": 0.0065
+        },
+        "1 Week": {
+            "durationSeconds": 604800,
+            "price": 0.02
+        }
+    },
+
+    "loginPrices" : {
+        "1 Hour": {
+            "durationSeconds": 3600,
+            "price": 0.001
+        },
+        "1 Day": {
+            "durationSeconds": 86400,
+            "price": 0.01
+        },
+        "1 Week": {
+            "durationSeconds": 604800,
+            "price": 0.1
+        }
+    }
+
+}
