@@ -4,6 +4,7 @@
 Note: nPass library code & example site will be migrated after June 5th 2020
 
 # Overview
+
 nPass is a chrome extension that interacts with web sites to provide paid access tokens, both for the general case of logging in to a site (no user registration required), and for access to individual content (no need to watch commercials).
 
 The goal of nPass is to demonstrate a viable alternative to ad-supported content:
