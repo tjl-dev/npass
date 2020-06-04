@@ -1,6 +1,6 @@
 {
   "name": "npass-example",
-  "homepage": "https://thiml.github.io/npass",
+  "homepage": "https://github.com/tjl-dev/npass",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
