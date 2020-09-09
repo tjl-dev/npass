@@ -76,7 +76,16 @@
             <artifactId>vertx-lang-kotlin-coroutines</artifactId>
             <version>3.9.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.rotilho.jnano</groupId>
+            <artifactId>jnano-commons</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.shyiko.levelkt</groupId>
+            <artifactId>levelkt</artifactId>
+            <version>0.1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

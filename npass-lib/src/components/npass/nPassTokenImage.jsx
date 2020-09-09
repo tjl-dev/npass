@@ -38,14 +38,20 @@ export class nPassTokenImage extends Component {
     }
 
     async createToken(priceInfo) {
-        try{
-            const token = await this.tokenProvider.createNewToken(this.props.contentDetails, this.props.paymentDetails, priceInfo)
-            this.onTokenReceived(token)
-        }
-        catch(e) {
-            console.log('failed to create new token', e)
-            if(this.props.onTokenFailed)
-                this.props.onTokenFailed('failed to create new token: ' +  e.error? e.error : JSON.stringify(e))
+        const disabled = this.props.disabled
+        if(!disabled)
+        {
+            try{
+                if(this.props.onTokenRequesting)
+                    this.props.onTokenRequesting()
+                const token = await this.tokenProvider.createNewToken(this.props.contentDetails, this.props.paymentDetails, priceInfo)
+                this.onTokenReceived(token)
+            }
+            catch(e) {
+                console.log('failed to create new token', e)
+                if(this.props.onTokenFailed)
+                    this.props.onTokenFailed('failed to create new token: ' +  e.error? e.error : JSON.stringify(e))
+            }
         }
     }
 
@@ -75,6 +81,8 @@ export class nPassTokenImage extends Component {
     render(){
         const preview = this.props.contentDetails.preview
         const hasExtension = this.state.hasExtension
+        const disabled = this.props.disabled
+        const minimal = this.props.contentDetails.minimal || disabled
 
         const active = this.state.active
         const imageObjectUrl = this.state.imageObjectUrl      
@@ -89,13 +97,17 @@ export class nPassTokenImage extends Component {
           style['maxWidth'] = maxwidth
         if(maxheight)
           style['maxHeight'] = maxheight
+        if(disabled && !active)
+            style['opacity'] = 0.5
 
         if(!hasExtension){
             return(
                 <div style={style} className={styles.nPassContentWrapper}  >
-                    <h4> This content is only available on Chrome with the nPass extension installed.</h4>
+                    { !minimal &&
+                        <p> This content is only available on Chrome with the nPass extension installed.</p>
+                    }
                     <img src={preview} style={style} alt="" />
-                    <a href="https://chrome.google.com/webstore/detail/npass/oohcmndahocfeiebkkdcbceeaanheafc" target="_blank" > Install nPass Extension </a>
+                    <a href="https://chrome.google.com/webstore/detail/npass/oohcmndahocfeiebkkdcbceeaanheafc" target="_blank" >Install nPass Extension </a>
                 </div>
             );
         }
@@ -105,7 +117,7 @@ export class nPassTokenImage extends Component {
         const lowestPriceInfo = prices[lowestPriceKey] || {}
         const lowestPrice = lowestPriceInfo.price
         const overlayText = lowestPrice ? ` ${toPrice(lowestPrice)} nano` : "nPass Token required"
-        const purchaseTokenButtons = Object.keys(prices).map( priceInfoKey =>
+        const purchaseTokenButtons = minimal? null : Object.keys(prices).map( priceInfoKey =>
             <Button size="sm" variant="outline-info" onClick={() => this.createToken(prices[priceInfoKey], true)} key={priceInfoKey}>
               <img src={icon} className={styles.npassButtonIcon} alt="npass:" /> {priceInfoKey}: {toPrice(prices[priceInfoKey].price)} nano
             </Button>
@@ -126,19 +138,21 @@ export class nPassTokenImage extends Component {
                                     {
                                         preview && <img src={preview}  style={style} alt="" />
                                     }
-                                    <svg  className={styles.imageOverlayPlayButton} viewBox="0 0 240 120" alt="View image"  >
-                                        <circle cx="120" cy="60" r="30" fill="none" strokeWidth="4" stroke="#fff"/>
-                                        <polygon points="110, 45 110, 75 140, 60" fill="#fff" />
-                                        <image href={icon} height="20px" width="20px"  x="80" y="100" />
-                                        <text x="100" y="115" className={styles.svgPrice}>{overlayText}</text>
-                                    </svg>
+                                    {  !disabled && !minimal &&
+                                        <svg  className={styles.imageOverlayPlayButton} viewBox="0 0 240 120" alt="View image"  >
+                                            <circle cx="120" cy="60" r="30" fill="none" strokeWidth="4" stroke="#fff"/>
+                                            <polygon points="110, 45 110, 75 140, 60" fill="#fff" />
+                                            <image href={icon} height="20px" width="20px"  x="80" y="100" />
+                                            <text x="100" y="115" className={styles.svgPrice}>{overlayText}</text>
+                                        </svg>
+                                    }
                                 </div>
 
                             )
                         }
                     </div>
                 </div>
-                { active == false &&
+                { active == false && minimal == false &&
                 <div style={{display: 'grid', margin: '10px', position: "absolute", right: "20%", top: "70%"}}>
                     <span style={{margin: '15x'}}> Purchase an nPass Token to view this content: </span>
                     {purchaseTokenButtons}

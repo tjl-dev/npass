@@ -61,7 +61,7 @@ class TokenizedViewerTile extends Component {
         const errorMessage = this.state.errorMessage;
         const title = this.state.contentDetails.title;
         const tokenData = this.state.tokenData || {};
-        const tokenExpiry = tokenData.expiry? 'Valid Till ' + new Date(tokenData.expiry *1000) : 'None'
+        const tokenExpiry = tokenData.expiry? 'Valid Till ' + new Date(0).setUTCSeconds(tokenData.expiry *1000) : 'None'
         const tokenPrice = tokenData.price? tokenData.price.toFixed(8).replace(/0+$/,"") : ''
 
         const npassProps = {

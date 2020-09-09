@@ -14,8 +14,7 @@ import io.vertx.kotlin.ext.web.client.sendJsonAwait
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import java.time.LocalDateTime
-import java.time.ZoneOffset
+import java.time.Instant
 
 class NPassAuthProvider(val httpClient: WebClient): JWTAuth {
 
@@ -32,6 +31,8 @@ class NPassAuthProvider(val httpClient: WebClient): JWTAuth {
                     Util.log("NPassAuthProvider: authenticated $decryptedToken")
                     resultHandler!!.handle(Future.succeededFuture(JWTUser(payload, "")))
                 }
+                else
+                    Util.log("NPassAuthProvider: token not valid $decryptedToken")
             } catch (e: Exception) {
                 Util.log("NPassAuthProvider: exception $e")
                 resultHandler!!.handle(Future.failedFuture(e))
@@ -85,7 +86,7 @@ class NPassAuthProvider(val httpClient: WebClient): JWTAuth {
         if (token.expiry.isEmpty())
             return false
         val expiry = token.expiry.toLong()
-        val now = LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)
+        val now = Instant.now().epochSecond
         return expiry > now
     }
 

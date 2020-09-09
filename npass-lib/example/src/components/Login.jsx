@@ -61,7 +61,7 @@ class Login extends Component {
         const token  = JSON.stringify(this.state.token) || {}
         const prices = this.state.prices || {}
         const errorMessage  = this.state.errorMessage || ""
-        const tokenExpiry = token.expiry? 'nPass Token Valid Till ' + new Date(token.expiry *1000) : ''
+        const tokenExpiry = token.expiry? 'nPass Token Valid Till ' + new Date(0).setUTCSeconds(token.expiry *1000) : ''
         const hasPrices = Object.keys(prices).length > 0
 
         const npassProps = {

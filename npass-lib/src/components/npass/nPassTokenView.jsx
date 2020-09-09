@@ -56,7 +56,7 @@ export class nPassTokenView extends Component {
 
         const active = this.state.active    
         const tokenData = this.state.tokenData || {}
-        const expiry = tokenData.expiry? '' + new Date(tokenData.expiry *1000) : ""
+        const expiry = tokenData.expiry? '' + new Date(0).setUTCSeconds(tokenData.expiry *1000) : ""
         const fromAddress = tokenData.fromAddress || ""
         const toAddress = tokenData.toAddress || ""
         const price = tokenData.price? toPrice(tokenData.price) : ""

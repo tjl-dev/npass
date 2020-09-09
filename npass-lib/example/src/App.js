@@ -5,6 +5,7 @@ import Home from './components/Home';
 import TokensDemo from './components/TokensDemo';
 import ProtectedDemo from './components/ProtectedDemo';
 import Login from './components/Login';
+import NanoBomb from './components/NanoBomb/NanoBomb';
 import './App.css';
 import 'npass/dist/index.css';
 
@@ -38,6 +39,8 @@ class App extends Component {
               <Route path="/npass/tokens"    render={(props) => <TokensDemo    {...props} {...config} /> } />
               <Route path="/npass/protected" render={(props) => <ProtectedDemo {...props} {...config} /> } />
               <Route path="/npass/login"     render={(props) => <Login         {...props} {...config} /> } />
+              <Route path="/npass/nanobomb/:sessionId"  component={NanoBomb} />
+              <Route path="/npass/nanobomb" component={NanoBomb} />
           </Switch>
       </main>
 
