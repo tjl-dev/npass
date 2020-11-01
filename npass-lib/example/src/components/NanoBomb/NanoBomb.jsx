@@ -136,7 +136,7 @@ class NanoBomb extends Component {
                             </Table> 
                             <div style={{display: "inline-grid"}}>
                                 {/* colour green if addres valid*/}
-                                <p>Enter your nano address to begin a new game:</p>
+                                <p>Enter your Nano address to begin a new game:</p>
                                 <input type="text"  onChange={this.addressChange} placeholder="Enter your Nano Address..." className={ newGameError.length > 0 ?  "form-control is-invalid" : "form-control" }/>
                                 <div className={ newGameError.length > 0 ?  "text-danger" : "hidden" }>{newGameError}</div>
                                 <Button disabled={!newEnabled} onClick={() => this.newGame(playerAddress)} >New Game</Button>                            
@@ -152,11 +152,11 @@ class NanoBomb extends Component {
                         <Table hover size="sm" style={{textAlign:"left"}}>    
                             <tr>
                                 <td width="200px">{unknown}</td>
-                                <td>Pay 0.001 nano to reveal this card</td>
+                                <td>Pay 0.001 NANO to reveal this card</td>
                             </tr>
                             <tr>
                                 <td>{nanocoin}</td>
-                                <td>Win 0.002 nano.  Hint: adjacent cards may have a gold border</td>
+                                <td>Win 0.002 NANO.  Hint: adjacent cards may have a gold border</td>
                             </tr>
                             <tr>
                                 <td>{heart}</td>
@@ -168,7 +168,7 @@ class NanoBomb extends Component {
                             </tr>
                             <tr>
                                 <td>{colin}</td>
-                                <td>Jackpot! Win up to 0.02 Nano (actual amount depends on the remaining jackpot pool)</td>
+                                <td>Jackpot! Win up to 0.02 NANO (actual amount depends on the remaining jackpot pool)</td>
                             </tr>
                             <tr>
                                 <td>{bomber}</td>
@@ -191,7 +191,7 @@ class NanoBomb extends Component {
                     </Card.Header>  
                     <div style={{textAlign: "left", margin: "30px"}}>
                         <p>This game is intended a concept demonstration, a fun game designed to show how <Link to="/npass">nPass Tokens</Link> can be used to provide instant tokenized persistent access to digital content with a single, and it is not intended as a gambling site.</p>
-                        <p>As such all winnings will be capped to the amount spent, and a facility is provided to recalim any spent nano using the Reclaim button.</p>
+                        <p>As such all winnings will be capped to the amount spent, and a facility is provided to recalim any spent Nano using the Reclaim button.</p>
                         <ul>
                             <li>Learn more <Link to="/npass"><strong>about nPass Tokens</strong></Link></li>
                             <li>Chrome Web Store: install the <a href="https://chrome.google.com/webstore/detail/npass/oohcmndahocfeiebkkdcbceeaanheafc" target="_blank"> nPass Chrome extension</a></li>
